@@ -1,0 +1,45 @@
+{
+	"schemaVersion": 1,
+	"id": "compsmpdiscordbot",
+	"version": "${version}",
+	"name": "CompSMP Discord Bot",
+	"description": " A Discord bot packaged in a Minecraft mod for extra features for the ComplementarySMP.",
+	"authors": [
+		"ArkoSammy12"
+	],
+	"contact": {
+		"homepage": "https://github.com/ArkoSammy12",
+		"sources": "https://github.com/ArkoSammy12/CompSMP-Discord-Bot"
+	},
+	"license": "MIT",
+	"icon": "assets/compsmpdiscordbot/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "xd.arkosammy.compsmpdiscordbot.CompSMPDiscordBot",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "xd.arkosammy.compsmpdiscordbot.CompSMPDiscordBotClient",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"compsmpdiscordbot.mixins.json",
+		{
+			"config": "compsmpdiscordbot.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.0",
+		"minecraft": ">=1.21",
+		"java": ">=21",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*"
+	}
+}
