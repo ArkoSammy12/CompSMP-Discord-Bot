@@ -22,6 +22,8 @@ repositories {
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
 	maven("https://oss.sonatype.org/content/repositories/snapshots")
+	maven("https://maven.enjarai.dev/releases")
+	maven("https://maven.nucleoid.xyz")
 }
 
 loom {
@@ -45,6 +47,9 @@ dependencies {
 	modImplementation("net.fabricmc:fabric-language-kotlin:${property("fabric_kotlin_version")}")
 
 	include(implementation("dev.kord:kord-core:${property("kord_version")}")!!)
+
+	modImplementation("xd.arkosammy:monkeyconfig:${property("monkey_config_version")}")
+
 }
 
 tasks.processResources {
