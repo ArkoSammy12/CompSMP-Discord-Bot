@@ -13,27 +13,17 @@
 	},
 	"license": "MIT",
 	"icon": "assets/compsmpdiscordbot/icon.png",
-	"environment": "*",
+	"environment": "server",
 	"entrypoints": {
-		"main": [
+		"server": [
 			{
 				"value": "xd.arkosammy.compsmpdiscordbot.CompSMPDiscordBot",
-				"adapter": "kotlin"
-			}
-		],
-		"client": [
-			{
-				"value": "xd.arkosammy.compsmpdiscordbot.CompSMPDiscordBotClient",
 				"adapter": "kotlin"
 			}
 		]
 	},
 	"mixins": [
-		"compsmpdiscordbot.mixins.json",
-		{
-			"config": "compsmpdiscordbot.client.mixins.json",
-			"environment": "client"
-		}
+		"compsmpdiscordbot.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.16.0",

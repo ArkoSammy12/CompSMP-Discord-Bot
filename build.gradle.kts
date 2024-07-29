@@ -32,7 +32,6 @@ loom {
 	mods {
 		create("compsmpdiscordbot") {
 			sourceSet(sourceSets.main.get())
-			sourceSet(sourceSets["client"])
 		}
 	}
 
